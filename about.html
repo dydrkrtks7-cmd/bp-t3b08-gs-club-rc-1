@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보 — 강서구 클럽 추천 | 더비스트</title>
+    <meta name="description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라. 010-6279-0862">
+    <meta name="keywords" content="강서 클럽 추천, 강서구 클럽, 강서 클럽, 클럽 강서, 홍대 클럽 대신, 강서구 술집, 강서구 핫플, 클럽 추천, 더비스트 클럽">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://t3b08-gs-club-rc-1.vercel.app/">
+    <!-- OG / Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-gs-club-rc-1.vercel.app/">
+    <meta property="og:title" content="정보 — 강서구 클럽 추천 | 더비스트">
+    <meta property="og:description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라.">
+    <meta property="og:image" content="https://t3b08-gs-club-rc-1.vercel.app/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://t3b08-gs-club-rc-1.vercel.app/">
+    <meta property="twitter:title" content="정보 — 강서구 클럽 추천 | 더비스트">
+    <meta property="twitter:description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라.">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Arial Black', 'Impact', 'Helvetica Neue', sans-serif; background: #1a1a1a; color: #e0e0e0; line-height: 1.4; }
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
+        h1 { font-size: 4rem; line-height: 0.9; color: #ff2a2a; text-shadow: 4px 4px 0 #000; }
+        h2 { font-size: 2.5rem; border-left: 6px solid #ff2a2a; padding-left: 20px; margin-bottom: 2rem; }
+        h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        p, li, blockquote { font-size: 1.2rem; margin-bottom: 1.2rem; }
+        a { color: #ff2a2a; text-decoration: underline; text-decoration-thickness: 3px; }
+        a:hover { color: #fff; background: #ff2a2a; }
+        strong { color: #ff2a2a; }
+        /* ===== LAYOUT GLOBAL ===== */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        section { padding: 80px 0; border-bottom: 4px solid #333; }
+        /* ===== NAV ===== */
+        nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #0d0d0d; border-bottom: 4px solid #ff2a2a; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+        .logo { font-size: 2rem; font-weight: 900; text-transform: uppercase; color: #fff; text-decoration: none; }
+        .logo span { color: #ff2a2a; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { color: #e0e0e0; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; padding: 8px 16px; border: 2px solid transparent; transition: 0.2s; }
+        .nav-links a:hover { border-color: #ff2a2a; background: transparent; color: #ff2a2a; }
+        .hamburger { display: none; font-size: 2rem; background: none; border: none; color: #fff; cursor: pointer; }
+        /* ===== HERO (정보) ===== */
+        .hero-info { padding-top: 180px; min-height: 70vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(45deg, #0d0d0d 0%, #1a1a1a 100%); }
+        .hero-info::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,42,42,0.03) 40px, rgba(255,42,42,0.03) 41px); z-index: 0; }
+        .hero-info .container { position: relative; z-index: 1; }
+        .hero-info h1 { font-size: 5rem; margin-bottom: 1.5rem; }
+        .hero-info p { font-size: 1.5rem; max-width: 700px; }
+        /* ===== CARD SYSTEM ===== */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .card { background: #0d0d0d; border: 3px solid #333; padding: 40px; position: relative; transition: 0.3s; }
+        .card:hover { border-color: #ff2a2a; transform: translateY(-8px); }
+        .card h3 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+        .card p { font-size: 1rem; }
+        .card .badge { display: inline-block; background: #ff2a2a; color: #fff; padding: 6px 16px; font-size: 0.8rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        /* ===== INFO LIST ===== */
+        .info-list { list-style: none; }
+        .info-list li { padding: 16px 0; border-bottom: 2px solid #333; display: flex; gap: 20px; align-items: baseline; }
+        .info-list li:last-child { border-bottom: none; }
+        .info-list .label { min-width: 120px; font-weight: 900; color: #ff2a2a; text-transform: uppercase; font-size: 0.9rem; }
+        .info-list .value { font-size: 1.1rem; }
+        /* ===== FAQ ===== */
+        .faq-item { margin-bottom: 20px; }
+        .faq-q { background: #0d0d0d; padding: 20px; border-left: 6px solid #ff2a2a; font-weight: 900; cursor: pointer; }
+        .faq-a { padding: 20px; background: #222; border-left: 6px solid #555; }
+        /* ===== TEL LINK ===== */
+        .tel-link { display: inline-block; background: #ff2a2a; color: #fff; padding: 16px 48px; font-size: 1.8rem; font-weight: 900; text-decoration: none; border: 4px solid #ff2a2a; transition: 0.2s; text-transform: uppercase; letter-spacing: 2px; }
+        .tel-link:hover { background: #000; color: #ff2a2a; }
+        /* ===== RESPONSIVE 768 ===== */
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .nav-inner { padding: 16px 20px; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #0d0d0d; padding: 20px; border-bottom: 4px solid #ff2a2a; }
+            .nav-links.active { display: flex; }
+            .hamburger { display: block; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .hero-info h1 { font-size: 3rem; }
+            .hero-info p { font-size: 1.2rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .info-list li { flex-direction: column; gap: 4px; }
+            .info-list .label { min-width: auto; }
+            .tel-link { font-size: 1.2rem; padding: 12px 32px; }
+        }
+        /* ===== FOOTER ===== */
+        footer { background: #0d0d0d; padding: 40px 0; border-top: 4px solid #ff2a2a; text-align: center; }
+        footer p { font-size: 0.9rem; color: #666; }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="logo"><span>더</span>비스트</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/info">정보</a></li>
+            <li><a href="/about">소개</a></li>
+            <li><a href="/contact">문의</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero-info">
+    <div class="container">
+        <h1>강서구 클럽<br>정보는 이거 하나면 끝</h1>
+        <p>홍대까지 갈 시간에 여기서 시작해라. 더비스트는 강서에서 유일하게 의미 있는 클럽이다. 위치, 시간, 입장료 — 다 까발린다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>📍 기본 정보</h2>
+        <ul class="info-list">
+            <li><span class="label">주소</span><span class="value">서울 강서구 화곡동 123-45, 지하 1층 — 길 찾기 귀찮으면 그냥 택시 타</span></li>
+            <li><span class="label">영업 시간</span><span class="value">매일 21:00 ~ 05:00 (토요일은 07:00까지 간다)</span></li>
+            <li><span class="label">입장료</span><span class="value">평일 15,000원 / 주말 20,000원 — 현금 or 카드, 암거나 돼</span></li>
+            <li><span class="label">연령</span><span class="value">만 19세 이상, 신분증 검사 빡세게 한다. 가짜 신분증 걸리면 바로 퇴출</span></li>
+            <li><span class="label">드레스 코드</span><span class="value">없다. 근데 운동화+반바지 오면 좀 생각해라. 최소한 청바지에 검은 티는 입어라</span></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🎵 사운드 & 공간</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="badge">SYSTEM</div>
+                <h3>L-Acoustics K2</h3>
+                <p>12만 와트 출력. 저음이 가슴을 뚫고 나간다. 스피커 앞에 서면 몸이 떨린다. 홍대 클럽 중에 이걸 갖춘 곳 손에 꼽는다.</p>
+            </div>
+            <div class="card">
+                <div class="badge">DJ BOOTH</div>
+                <h3>Pioneer DJM-V10 + CDJ-3000</h3>
+                <p>4채널 믹서. 게스트 DJ들도 여기 오면 입꼬리 올라간다. 매주 금/토 라인업은 인스타 확인해라.</p>
+            </div>
+            <div class="card">
+                <div class="badge">LAYOUT</div>
+                <h3>원형 플로어 + 2층 라운지</h3>
+                <p>메인 댄스 플로어는 원형. 중앙에서 조명이 내리꽂힌다. 2층에서는 전체가 내려다보인다. 사람 구경하기 좋은 자리.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🍸 주류 & 가격</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="badge">BOTTLE</div>
+                <h3>양주 세트</h3>
+                <p>시바스 리갈 12년 — 120,000원 / 조니워커 블랙 — 100,000원 / 발렌타인 17년 — 180,000원. 안주는 땅콩+과일 기본.</p>
+            </div>
+            <div class="card">
+                <div class="badge">BEER</div>
+                <h3>생맥주 & 캔맥주</h3>
+                <p>카스 생맥주 500ml — 7,000원 / 버드와이저 캔 — 5,000원. 하이볼도 8,000원. 가격 착하다.</p>
+            </div>
+            <div class="card">
+                <div class="badge">SHOT</div>
+                <h3>샷 메뉴</h3>
+                <p>데낄라 샷 — 5,000원 / 보드카 샷 — 5,000원 / 진토닉 — 7,000원. 3샷부터는 얼굴 빨개지니까 천천히.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>❓ 자주 묻는 질문</h2>
+        <div class="faq-item">
+            <div class="faq-q">Q. 첫 방문인데 눈치 안 보여도 돼?</div>
+            <div class="faq-a">A. 당연히 돼. 오히려 눈치 보는 놈들이 더 눈치 보여. 그냥 와서 음악 듣고, 술 마시고, 춤춰라. 아무도 안 쳐다본다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 단체 예약 가능해?</div>
+            <div class="faq-a">A. 가능. 10인 이상은 전화로 미리 얘기해라. 010-6279-0862. 병 세트 할인도 해준다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 발렌타인데이/크리스마스에도 열어?</div>
+            <div class="faq-a">A. 연중무휴다. 명절에도 연다. 오히려 그런 날이 더 재밌다. 사람들 텐션 미침.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 주차는?</div>
+            <div class="faq-a">A. 건물 뒤편 공영주차장 이용. 2시간 3,000원. 근데 술 마실 거면 대리 불러라. 우리는 책임 안 진다.</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container" style="text-align: center;">
+        <h2>☎️ 예약 & 문의</h2>
+        <p style="font-size: 1.5rem;
+</body>
+</html>
