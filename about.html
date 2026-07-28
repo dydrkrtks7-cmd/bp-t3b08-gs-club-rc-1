@@ -94,110 +94,95 @@
 </head>
 <body>
 
-<nav>
-    <div class="nav-inner">
-        <a href="/" class="logo"><span>더</span>비스트</a>
-        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
-        <ul class="nav-links">
-            <li><a href="/">홈</a></li>
-            <li><a href="/info">정보</a></li>
-            <li><a href="/about">소개</a></li>
-            <li><a href="/contact">문의</a></li>
-        </ul>
-    </div>
-</nav>
+<main>
+  <section class="container hero-info">
+    <h1>강서 클럽 추천 정보</h1>
+    <p>강서구 일대에서 클럽을 알아보는 분들을 위해 위치, 운영 방식, 이용 절차를 항목별로 정리했습니다. 특정 업체를 홍보하기보다 선택 기준을 세우는 데 도움이 되는 일반 정보를 담았습니다.</p>
+  </section>
 
-<section class="hero-info">
-    <div class="container">
-        <h1>강서구 클럽<br>정보는 이거 하나면 끝</h1>
-        <p>홍대까지 갈 시간에 여기서 시작해라. 더비스트는 강서에서 유일하게 의미 있는 클럽이다. 위치, 시간, 입장료 — 다 까발린다.</p>
+  <section class="container">
+    <h2>선택 기준으로 살펴보는 항목</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="badge">위치</span>
+        <p>강서구 내 클럽은 역세권과 대로변에 밀집한 경우가 많아 대중교통 접근이 비교적 수월한 편입니다.</p>
+      </div>
+      <div class="card">
+        <span class="badge">운영 형태</span>
+        <p>테이블 예약과 스탠딩 입장을 함께 운영하는 곳이 있어 방문 전 형태를 확인하는 것이 좋습니다.</p>
+      </div>
+      <div class="card">
+        <span class="badge">이용 절차</span>
+        <p>전화 문의 후 예약을 확정하는 방식이 일반적이며, 인원과 방문 시간을 함께 안내하면 진행이 수월합니다.</p>
+      </div>
+      <div class="card">
+        <span class="badge">동행 인원</span>
+        <p>인원 구성에 따라 안내 가능한 좌석과 공간이 달라질 수 있어 사전 확인이 필요합니다.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section>
-    <div class="container">
-        <h2>📍 기본 정보</h2>
-        <ul class="info-list">
-            <li><span class="label">주소</span><span class="value">서울 강서구 화곡동 123-45, 지하 1층 — 길 찾기 귀찮으면 그냥 택시 타</span></li>
-            <li><span class="label">영업 시간</span><span class="value">매일 21:00 ~ 05:00 (토요일은 07:00까지 간다)</span></li>
-            <li><span class="label">입장료</span><span class="value">평일 15,000원 / 주말 20,000원 — 현금 or 카드, 암거나 돼</span></li>
-            <li><span class="label">연령</span><span class="value">만 19세 이상, 신분증 검사 빡세게 한다. 가짜 신분증 걸리면 바로 퇴출</span></li>
-            <li><span class="label">드레스 코드</span><span class="value">없다. 근데 운동화+반바지 오면 좀 생각해라. 최소한 청바지에 검은 티는 입어라</span></li>
-        </ul>
+  <section class="container">
+    <h2>기본 정보</h2>
+    <ul class="info-list">
+      <li><span class="label">지역</span><span class="value">강서구 일대</span></li>
+      <li><span class="label">업종</span><span class="value">클럽</span></li>
+      <li><span class="label">문의 방법</span><span class="value">전화 문의 후 예약</span></li>
+      <li><span class="label">참고 사항</span><span class="value">요일별 운영 조건은 문의 시 확인 가능</span></li>
+      <li><span class="label">이용 형태</span><span class="value">테이블 예약 또는 스탠딩 입장</span></li>
+      <li><span class="label">결제 방식</span><span class="value">현장 결제가 일반적</span></li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <h2>용어 정리</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="badge">테이블 예약</span>
+        <p>좌석을 미리 지정해 이용하는 방식으로, 방문 전 인원과 시간을 전달합니다.</p>
+      </div>
+      <div class="card">
+        <span class="badge">스탠딩 입장</span>
+        <p>별도 테이블 없이 자유롭게 입장해 이용하는 방식을 말합니다.</p>
+      </div>
+      <div class="card">
+        <span class="badge">동행 인원</span>
+        <p>함께 방문하는 일행의 수로, 좌석 배정의 기준이 됩니다.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section>
-    <div class="container">
-        <h2>🎵 사운드 & 공간</h2>
-        <div class="card-grid">
-            <div class="card">
-                <div class="badge">SYSTEM</div>
-                <h3>L-Acoustics K2</h3>
-                <p>12만 와트 출력. 저음이 가슴을 뚫고 나간다. 스피커 앞에 서면 몸이 떨린다. 홍대 클럽 중에 이걸 갖춘 곳 손에 꼽는다.</p>
-            </div>
-            <div class="card">
-                <div class="badge">DJ BOOTH</div>
-                <h3>Pioneer DJM-V10 + CDJ-3000</h3>
-                <p>4채널 믹서. 게스트 DJ들도 여기 오면 입꼬리 올라간다. 매주 금/토 라인업은 인스타 확인해라.</p>
-            </div>
-            <div class="card">
-                <div class="badge">LAYOUT</div>
-                <h3>원형 플로어 + 2층 라운지</h3>
-                <p>메인 댄스 플로어는 원형. 중앙에서 조명이 내리꽂힌다. 2층에서는 전체가 내려다보인다. 사람 구경하기 좋은 자리.</p>
-            </div>
-        </div>
+  <section class="container">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <p class="faq-q">예약 없이 방문해도 되나요?</p>
+      <p class="faq-a">당일 방문도 가능하지만, 인원이 많거나 특정 시간대에는 사전 예약이 원활한 진행에 도움이 됩니다.</p>
     </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>🍸 주류 & 가격</h2>
-        <div class="card-grid">
-            <div class="card">
-                <div class="badge">BOTTLE</div>
-                <h3>양주 세트</h3>
-                <p>시바스 리갈 12년 — 120,000원 / 조니워커 블랙 — 100,000원 / 발렌타인 17년 — 180,000원. 안주는 땅콩+과일 기본.</p>
-            </div>
-            <div class="card">
-                <div class="badge">BEER</div>
-                <h3>생맥주 & 캔맥주</h3>
-                <p>카스 생맥주 500ml — 7,000원 / 버드와이저 캔 — 5,000원. 하이볼도 8,000원. 가격 착하다.</p>
-            </div>
-            <div class="card">
-                <div class="badge">SHOT</div>
-                <h3>샷 메뉴</h3>
-                <p>데낄라 샷 — 5,000원 / 보드카 샷 — 5,000원 / 진토닉 — 7,000원. 3샷부터는 얼굴 빨개지니까 천천히.</p>
-            </div>
-        </div>
+    <div class="faq-item">
+      <p class="faq-q">교통편은 어떻게 되나요?</p>
+      <p class="faq-a">강서구 주요 역과 버스 노선을 통한 접근이 가능하며, 정확한 위치는 문의 시 안내받을 수 있습니다.</p>
     </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>❓ 자주 묻는 질문</h2>
-        <div class="faq-item">
-            <div class="faq-q">Q. 첫 방문인데 눈치 안 보여도 돼?</div>
-            <div class="faq-a">A. 당연히 돼. 오히려 눈치 보는 놈들이 더 눈치 보여. 그냥 와서 음악 듣고, 술 마시고, 춤춰라. 아무도 안 쳐다본다.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q">Q. 단체 예약 가능해?</div>
-            <div class="faq-a">A. 가능. 10인 이상은 전화로 미리 얘기해라. 010-6279-0862. 병 세트 할인도 해준다.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q">Q. 발렌타인데이/크리스마스에도 열어?</div>
-            <div class="faq-a">A. 연중무휴다. 명절에도 연다. 오히려 그런 날이 더 재밌다. 사람들 텐션 미침.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q">Q. 주차는?</div>
-            <div class="faq-a">A. 건물 뒤편 공영주차장 이용. 2시간 3,000원. 근데 술 마실 거면 대리 불러라. 우리는 책임 안 진다.</div>
-        </div>
+    <div class="faq-item">
+      <p class="faq-q">문의는 어떻게 하나요?</p>
+      <p class="faq-a">아래 연락처로 전화 문의 후 예약 절차를 안내받을 수 있습니다.</p>
     </div>
-</section>
+    <div class="faq-item">
+      <p class="faq-q">인원이 많아도 이용할 수 있나요?</p>
+      <p class="faq-a">단체 방문의 경우 사전에 인원을 알려주면 그에 맞는 안내를 받을 수 있습니다.</p>
+    </div>
+  </section>
 
-<section>
-    <div class="container" style="text-align: center;">
-        <h2>☎️ 예약 & 문의</h2>
-        <p style="font-size: 1.5rem;
+  <section class="container">
+    <h2>이용 안내</h2>
+    <p>본 페이지는 강서 지역 클럽을 처음 찾는 분들을 위한 일반적인 안내 정보이며, 특정 업체의 실제 조건과는 다를 수 있습니다. 정확한 사항은 방문 전 전화 문의를 통해 확인하는 것이 가장 정확합니다.</p>
+  </section>
+
+  <section class="container">
+    <h2>문의</h2>
+    <p><a class="tel-link" href="tel:010-6279-0862">010-6279-0862</a></p>
+  </section>
+</main>
+
+
 </body>
 </html>
