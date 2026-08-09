@@ -1,187 +1,185 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정보 — 강서구 클럽 추천 | 더비스트</title>
-    <meta name="description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라. 010-6279-0862">
-    <meta name="keywords" content="강서 클럽 추천, 강서구 클럽, 강서 클럽, 클럽 강서, 홍대 클럽 대신, 강서구 술집, 강서구 핫플, 클럽 추천, 더비스트 클럽">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://gangseo-review-choice.mapo-room-guide.xyz/about.html">
-    <!-- OG / Twitter Card -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gangseo-review-choice.mapo-room-guide.xyz/about.html">
-    <meta property="og:title" content="정보 — 강서구 클럽 추천 | 더비스트">
-    <meta property="og:description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라. 010-6279-0862">
-    <meta property="og:image" content="https://t3b08-gs-club-rc-1.vercel.app/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://t3b08-gs-club-rc-1.vercel.app/">
-    <meta property="twitter:title" content="정보 — 강서구 클럽 추천 | 더비스트">
-    <meta property="twitter:description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라.">
-    <style>
-        /* ===== RESET & BASE ===== */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Arial Black', 'Impact', 'Helvetica Neue', sans-serif; background: #1a1a1a; color: #e0e0e0; line-height: 1.4; }
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
-        h1 { font-size: 4rem; line-height: 0.9; color: #ff2a2a; text-shadow: 4px 4px 0 #000; }
-        h2 { font-size: 2.5rem; border-left: 6px solid #ff2a2a; padding-left: 20px; margin-bottom: 2rem; }
-        h3 { font-size: 1.8rem; margin-bottom: 1rem; }
-        p, li, blockquote { font-size: 1.2rem; margin-bottom: 1.2rem; }
-        a { color: #ff2a2a; text-decoration: underline; text-decoration-thickness: 3px; }
-        a:hover { color: #fff; background: #ff2a2a; }
-        strong { color: #ff2a2a; }
-        /* ===== LAYOUT GLOBAL ===== */
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-        section { padding: 80px 0; border-bottom: 4px solid #333; }
-        /* ===== NAV ===== */
-        nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #0d0d0d; border-bottom: 4px solid #ff2a2a; }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
-        .logo { font-size: 2rem; font-weight: 900; text-transform: uppercase; color: #fff; text-decoration: none; }
-        .logo span { color: #ff2a2a; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { color: #e0e0e0; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; padding: 8px 16px; border: 2px solid transparent; transition: 0.2s; }
-        .nav-links a:hover { border-color: #ff2a2a; background: transparent; color: #ff2a2a; }
-        .hamburger { display: none; font-size: 2rem; background: none; border: none; color: #fff; cursor: pointer; }
-        /* ===== HERO (정보) ===== */
-        .hero-info { padding-top: 180px; min-height: 70vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(45deg, #0d0d0d 0%, #1a1a1a 100%); }
-        .hero-info::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,42,42,0.03) 40px, rgba(255,42,42,0.03) 41px); z-index: 0; }
-        .hero-info .container { position: relative; z-index: 1; }
-        .hero-info h1 { font-size: 5rem; margin-bottom: 1.5rem; }
-        .hero-info p { font-size: 1.5rem; max-width: 700px; }
-        /* ===== CARD SYSTEM ===== */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .card { background: #0d0d0d; border: 3px solid #333; padding: 40px; position: relative; transition: 0.3s; }
-        .card:hover { border-color: #ff2a2a; transform: translateY(-8px); }
-        .card h3 { font-size: 1.6rem; margin-bottom: 1.5rem; }
-        .card p { font-size: 1rem; }
-        .card .badge { display: inline-block; background: #ff2a2a; color: #fff; padding: 6px 16px; font-size: 0.8rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 1.5rem; }
-        /* ===== INFO LIST ===== */
-        .info-list { list-style: none; }
-        .info-list li { padding: 16px 0; border-bottom: 2px solid #333; display: flex; gap: 20px; align-items: baseline; }
-        .info-list li:last-child { border-bottom: none; }
-        .info-list .label { min-width: 120px; font-weight: 900; color: #ff2a2a; text-transform: uppercase; font-size: 0.9rem; }
-        .info-list .value { font-size: 1.1rem; }
-        /* ===== FAQ ===== */
-        .faq-item { margin-bottom: 20px; }
-        .faq-q { background: #0d0d0d; padding: 20px; border-left: 6px solid #ff2a2a; font-weight: 900; cursor: pointer; }
-        .faq-a { padding: 20px; background: #222; border-left: 6px solid #555; }
-        /* ===== TEL LINK ===== */
-        .tel-link { display: inline-block; background: #ff2a2a; color: #fff; padding: 16px 48px; font-size: 1.8rem; font-weight: 900; text-decoration: none; border: 4px solid #ff2a2a; transition: 0.2s; text-transform: uppercase; letter-spacing: 2px; }
-        .tel-link:hover { background: #000; color: #ff2a2a; }
-        /* ===== RESPONSIVE 768 ===== */
-        @media (max-width: 768px) {
-            .container { padding: 0 20px; }
-            .nav-inner { padding: 16px 20px; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #0d0d0d; padding: 20px; border-bottom: 4px solid #ff2a2a; }
-            .nav-links.active { display: flex; }
-            .hamburger { display: block; }
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.8rem; }
-            .hero-info h1 { font-size: 3rem; }
-            .hero-info p { font-size: 1.2rem; }
-            .card-grid { grid-template-columns: 1fr; }
-            .info-list li { flex-direction: column; gap: 4px; }
-            .info-list .label { min-width: auto; }
-            .tel-link { font-size: 1.2rem; padding: 12px 32px; }
-        }
-        /* ===== FOOTER ===== */
-        footer { background: #0d0d0d; padding: 40px 0; border-top: 4px solid #ff2a2a; text-align: center; }
-        footer p { font-size: 0.9rem; color: #666; }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>정보 — 강서구 클럽 추천 | 더비스트</title>
+ <meta name="description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라.">
+ <meta name="keywords" content="강서 클럽 추천, 강서구 클럽, 강서 클럽, 클럽 강서, 홍대 클럽 대신, 강서구 술집, 강서구 핫플, 클럽 추천, 더비스트 클럽">
+ <link rel="canonical" href="https://gangseo-review-choice.mapo-room-guide.xyz/about.html">
+ <!-- OG / Twitter Card -->
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://gangseo-review-choice.mapo-room-guide.xyz/about.html">
+ <meta property="og:title" content="정보 — 강서구 클럽 추천 | 더비스트">
+ <meta property="og:description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라.">
+ <meta property="og:image" content="https://t3b08-gs-club-rc-1.vercel.app/og-image.jpg">
+ <meta property="twitter:card" content="summary_large_image">
+ <meta property="twitter:url" content="https://t3b08-gs-club-rc-1.vercel.app/">
+ <meta property="twitter:title" content="정보 — 강서구 클럽 추천 | 더비스트">
+ <meta property="twitter:description" content="강서구 압도적 클럽 추천. 가식 없는 사운드, 거친 조명, 규격 외의 밤. 강서 클럽의 새 기준을 직접 부숴라.">
+ <style>
+ /* ===== RESET & BASE ===== */
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
+ body { font-family: 'Arial Black', 'Impact', 'Helvetica Neue', sans-serif; background: #1a1a1a; color: #e0e0e0; line-height: 1.4; }
+ /* ===== TYPOGRAPHY ===== */
+ h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
+ h1 { font-size: 4rem; line-height: 0.9; color: #ff2a2a; text-shadow: 4px 4px 0 #000; }
+ h2 { font-size: 2.5rem; border-left: 6px solid #ff2a2a; padding-left: 20px; margin-bottom: 2rem; }
+ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+ p, li, blockquote { font-size: 1.2rem; margin-bottom: 1.2rem; }
+ a { color: #ff2a2a; text-decoration: underline; text-decoration-thickness: 3px; }
+ a:hover { color: #fff; background: #ff2a2a; }
+ strong { color: #ff2a2a; }
+ /* ===== LAYOUT GLOBAL ===== */
+ .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+ section { padding: 80px 0; border-bottom: 4px solid #333; }
+ /* ===== NAV ===== */
+ nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #0d0d0d; border-bottom: 4px solid #ff2a2a; }
+ .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+ .logo { font-size: 2rem; font-weight: 900; text-transform: uppercase; color: #fff; text-decoration: none; }
+ .logo span { color: #ff2a2a; }
+ .nav-links { display: flex; gap: 30px; list-style: none; }
+ .nav-links a { color: #e0e0e0; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; padding: 8px 16px; border: 2px solid transparent; transition: 0.2s; }
+ .nav-links a:hover { border-color: #ff2a2a; background: transparent; color: #ff2a2a; }
+ .hamburger { display: none; font-size: 2rem; background: none; border: none; color: #fff; cursor: pointer; }
+ /* ===== HERO (정보) ===== */
+ .hero-info { padding-top: 180px; min-height: 70vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(45deg, #0d0d0d 0%, #1a1a1a 100%); }
+ .hero-info::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,42,42,0.03) 40px, rgba(255,42,42,0.03) 41px); z-index: 0; }
+ .hero-info .container { position: relative; z-index: 1; }
+ .hero-info h1 { font-size: 5rem; margin-bottom: 1.5rem; }
+ .hero-info p { font-size: 1.5rem; max-width: 700px; }
+ /* ===== CARD SYSTEM ===== */
+ .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+ .card { background: #0d0d0d; border: 3px solid #333; padding: 40px; position: relative; transition: 0.3s; }
+ .card:hover { border-color: #ff2a2a; transform: translateY(-8px); }
+ .card h3 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+ .card p { font-size: 1rem; }
+ .card .badge { display: inline-block; background: #ff2a2a; color: #fff; padding: 6px 16px; font-size: 0.8rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 1.5rem; }
+ /* ===== INFO LIST ===== */
+ .info-list { list-style: none; }
+ .info-list li { padding: 16px 0; border-bottom: 2px solid #333; display: flex; gap: 20px; align-items: baseline; }
+ .info-list li:last-child { border-bottom: none; }
+ .info-list .label { min-width: 120px; font-weight: 900; color: #ff2a2a; text-transform: uppercase; font-size: 0.9rem; }
+ .info-list .value { font-size: 1.1rem; }
+ /* ===== FAQ ===== */
+ .faq-item { margin-bottom: 20px; }
+ .faq-q { background: #0d0d0d; padding: 20px; border-left: 6px solid #ff2a2a; font-weight: 900; cursor: pointer; }
+ .faq-a { padding: 20px; background: #222; border-left: 6px solid #555; }
+ /* ===== TEL LINK ===== */
+ .tel-link { display: inline-block; background: #ff2a2a; color: #fff; padding: 16px 48px; font-size: 1.8rem; font-weight: 900; text-decoration: none; border: 4px solid #ff2a2a; transition: 0.2s; text-transform: uppercase; letter-spacing: 2px; }
+ .tel-link:hover { background: #000; color: #ff2a2a; }
+ /* ===== RESPONSIVE 768 ===== */
+ @media (max-width: 768px) {
+ .container { padding: 0 20px; }
+ .nav-inner { padding: 16px 20px; }
+ .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #0d0d0d; padding: 20px; border-bottom: 4px solid #ff2a2a; }
+ .nav-links.active { display: flex; }
+ .hamburger { display: block; }
+ h1 { font-size: 2.5rem; }
+ h2 { font-size: 1.8rem; }
+ .hero-info h1 { font-size: 3rem; }
+ .hero-info p { font-size: 1.2rem; }
+ .card-grid { grid-template-columns: 1fr; }
+ .info-list li { flex-direction: column; gap: 4px; }
+ .info-list .label { min-width: auto; }
+ .tel-link { font-size: 1.2rem; padding: 12px 32px; }
+ }
+ /* ===== FOOTER ===== */
+ footer { background: #0d0d0d; padding: 40px 0; border-top: 4px solid #ff2a2a; text-align: center; }
+ footer p { font-size: 0.9rem; color: #666; }
+ </style>
   <meta name="twitter:card" content="summary">
 </head>
 <body>
 
 <main>
-  <section class="container hero-info">
-    <h1>강서 클럽 추천 정보</h1>
-    <p>강서구 일대에서 클럽을 알아보는 분들을 위해 위치, 운영 방식, 이용 절차를 항목별로 정리했습니다. 특정 업체를 홍보하기보다 선택 기준을 세우는 데 도움이 되는 일반 정보를 담았습니다.</p>
-  </section>
+ <section class="container hero-info">
+ <h1>강서 클럽 추천 정보</h1>
+ <p>강서구 일대에서 클럽을 알아보는 분들을 위해 위치, 운영 방식, 이용 절차를 항목별로 정리했습니다. 특정 업체를 홍보하기보다 선택 기준을 세우는 데 도움이 되는 일반 정보를 담았습니다.</p>
+ </section>
 
-  <section class="container">
-    <h2>선택 기준으로 살펴보는 항목</h2>
-    <div class="card-grid">
-      <div class="card">
-        <span class="badge">위치</span>
-        <p>강서구 내 클럽은 역세권과 대로변에 밀집한 경우가 많아 대중교통 접근이 비교적 수월한 편입니다.</p>
-      </div>
-      <div class="card">
-        <span class="badge">운영 형태</span>
-        <p>테이블 예약과 스탠딩 입장을 함께 운영하는 곳이 있어 방문 전 형태를 확인하는 것이 좋습니다.</p>
-      </div>
-      <div class="card">
-        <span class="badge">이용 절차</span>
-        <p>전화 문의 후 예약을 확정하는 방식이 일반적이며, 인원과 방문 시간을 함께 안내하면 진행이 수월합니다.</p>
-      </div>
-      <div class="card">
-        <span class="badge">동행 인원</span>
-        <p>인원 구성에 따라 안내 가능한 좌석과 공간이 달라질 수 있어 사전 확인이 필요합니다.</p>
-      </div>
-    </div>
-  </section>
+ <section class="container">
+ <h2>선택 기준으로 살펴보는 항목</h2>
+ <div class="card-grid">
+ <div class="card">
+ <span class="badge">위치</span>
+ <p>강서구 내 클럽은 역세권과 대로변에 밀집한 경우가 많아 대중교통 접근이 비교적 수월한 편입니다.</p>
+ </div>
+ <div class="card">
+ <span class="badge">운영 형태</span>
+ <p>테이블 예약과 스탠딩 입장을 함께 운영하는 곳이 있어 방문 전 형태를 확인하는 것이 좋습니다.</p>
+ </div>
+ <div class="card">
+ <span class="badge">이용 절차</span>
+ <p>전화 문의 후 예약을 확정하는 방식이 일반적이며, 인원과 방문 시간을 함께 안내하면 진행이 수월합니다.</p>
+ </div>
+ <div class="card">
+ <span class="badge">동행 인원</span>
+ <p>인원 구성에 따라 안내 가능한 좌석과 공간이 달라질 수 있어 사전 확인이 필요합니다.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="container">
-    <h2>기본 정보</h2>
-    <ul class="info-list">
-      <li><span class="label">지역</span><span class="value">강서구 일대</span></li>
-      <li><span class="label">업종</span><span class="value">클럽</span></li>
-      <li><span class="label">문의 방법</span><span class="value">전화 문의 후 예약</span></li>
-      <li><span class="label">참고 사항</span><span class="value">요일별 운영 조건은 문의 시 확인 가능</span></li>
-      <li><span class="label">이용 형태</span><span class="value">테이블 예약 또는 스탠딩 입장</span></li>
-      <li><span class="label">결제 방식</span><span class="value">현장 결제가 일반적</span></li>
-    </ul>
-  </section>
+ <section class="container">
+ <h2>기본 정보</h2>
+ <ul class="info-list">
+ <li><span class="label">지역</span><span class="value">강서구 일대</span></li>
+ <li><span class="label">업종</span><span class="value">클럽</span></li>
+ <li><span class="label">문의 방법</span><span class="value">전화 문의 후 예약</span></li>
+ <li><span class="label">참고 사항</span><span class="value">요일별 운영 조건은 문의 시 확인 가능</span></li>
+ <li><span class="label">이용 형태</span><span class="value">테이블 예약 또는 스탠딩 입장</span></li>
+ <li><span class="label">결제 방식</span><span class="value">현장 결제가 일반적</span></li>
+ </ul>
+ </section>
 
-  <section class="container">
-    <h2>용어 정리</h2>
-    <div class="card-grid">
-      <div class="card">
-        <span class="badge">테이블 예약</span>
-        <p>좌석을 미리 지정해 이용하는 방식으로, 방문 전 인원과 시간을 전달합니다.</p>
-      </div>
-      <div class="card">
-        <span class="badge">스탠딩 입장</span>
-        <p>별도 테이블 없이 자유롭게 입장해 이용하는 방식을 말합니다.</p>
-      </div>
-      <div class="card">
-        <span class="badge">동행 인원</span>
-        <p>함께 방문하는 일행의 수로, 좌석 배정의 기준이 됩니다.</p>
-      </div>
-    </div>
-  </section>
+ <section class="container">
+ <h2>용어 정리</h2>
+ <div class="card-grid">
+ <div class="card">
+ <span class="badge">테이블 예약</span>
+ <p>좌석을 미리 지정해 이용하는 방식으로, 방문 전 인원과 시간을 전달합니다.</p>
+ </div>
+ <div class="card">
+ <span class="badge">스탠딩 입장</span>
+ <p>별도 테이블 없이 자유롭게 입장해 이용하는 방식을 말합니다.</p>
+ </div>
+ <div class="card">
+ <span class="badge">동행 인원</span>
+ <p>함께 방문하는 일행의 수로, 좌석 배정의 기준이 됩니다.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="container">
-    <h2>자주 묻는 질문</h2>
-    <div class="faq-item">
-      <p class="faq-q">예약 없이 방문해도 되나요?</p>
-      <p class="faq-a">당일 방문도 가능하지만, 인원이 많거나 특정 시간대에는 사전 예약이 원활한 진행에 도움이 됩니다.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">교통편은 어떻게 되나요?</p>
-      <p class="faq-a">강서구 주요 역과 버스 노선을 통한 접근이 가능하며, 정확한 위치는 문의 시 안내받을 수 있습니다.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">문의는 어떻게 하나요?</p>
-      <p class="faq-a">아래 연락처로 전화 문의 후 예약 절차를 안내받을 수 있습니다.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">인원이 많아도 이용할 수 있나요?</p>
-      <p class="faq-a">단체 방문의 경우 사전에 인원을 알려주면 그에 맞는 안내를 받을 수 있습니다.</p>
-    </div>
-  </section>
+ <section class="container">
+ <h2>자주 묻는 질문</h2>
+ <div class="faq-item">
+ <p class="faq-q">예약 없이 방문해도 되나요?</p>
+ <p class="faq-a">당일 방문도 가능하지만, 인원이 많거나 특정 시간대에는 사전 예약이 원활한 진행에 도움이 됩니다.</p>
+ </div>
+ <div class="faq-item">
+ <p class="faq-q">교통편은 어떻게 되나요?</p>
+ <p class="faq-a">강서구 주요 역과 버스 노선을 통한 접근이 가능하며, 정확한 위치는 문의 시 안내받을 수 있습니다.</p>
+ </div>
+ <div class="faq-item">
+ <p class="faq-q">문의는 어떻게 하나요?</p>
+ <p class="faq-a">아래 연락처로 전화 문의 후 예약 절차를 안내받을 수 있습니다.</p>
+ </div>
+ <div class="faq-item">
+ <p class="faq-q">인원이 많아도 이용할 수 있나요?</p>
+ <p class="faq-a">단체 방문의 경우 사전에 인원을 알려주면 그에 맞는 안내를 받을 수 있습니다.</p>
+ </div>
+ </section>
 
-  <section class="container">
-    <h2>이용 안내</h2>
-    <p>본 페이지는 강서 지역 클럽을 처음 찾는 분들을 위한 일반적인 안내 정보이며, 특정 업체의 실제 조건과는 다를 수 있습니다. 정확한 사항은 방문 전 전화 문의를 통해 확인하는 것이 가장 정확합니다.</p>
-  </section>
+ <section class="container">
+ <h2>이용 안내</h2>
+ <p>본 페이지는 강서 지역 클럽을 처음 찾는 분들을 위한 일반적인 안내 정보이며, 특정 업체의 실제 조건과는 다를 수 있습니다. 정확한 사항은 방문 전 전화 문의를 통해 확인하는 것이 가장 정확합니다.</p>
+ </section>
 
-  <section class="container">
-    <h2>문의</h2>
-    <p><a class="tel-link" href="tel:010-6279-0862">010-6279-0862</a></p>
-  </section>
+ <section class="container">
+ <h2>문의</h2>
+ 
+ </section>
 </main>
 
 
