@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b08-gs-club-rc-1</title>
+  <meta name="description" content="t3b08-gs-club-rc-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://gangseo-review-choice.mapo-room-guide.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ===== RESET & BASE ===== */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ html {
+ scroll-behavior: smooth;
+ }
+
+ body {
+ font-family: 'system-ui', 'Segoe UI', Roboto, sans-serif;
+ background: #1a1a1a;
+ color: #e5e5e5;
+ line-height: 1.4;
+ overflow-x: hidden;
+ }
+
+ /* ===== TYPOGRAPHY ===== */
+ h1, h2, h3, h4 {
+ font-family: 'Impact', 'Arial Black', 'system-ui', sans-serif;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ color: #e5e5e5;
+ }
+
+ h1 {
+ font-size: clamp(3.5rem, 12vw, 6rem);
+ line-height: 0.85;
+ color: #ff6b35;
+ text-shadow: 4px 4px 0 #1a1a1a, 6px 6px 0 #e5e5e5;
+ }
+
+ h2 {
+ font-size: clamp(2.2rem, 6vw, 3.5rem);
+ border-left: 6px solid #ff6b35;
+ padding-left: 20px;
+ margin-bottom: 32px;
+ transform: skewX(-2deg);
+ }
+
+ h3 {
+ font-size: 1.8rem;
+ margin-bottom: 16px;
+ }
+
+ p, li, blockquote {
+ font-size: 1.1rem;
+ font-weight: 400;
+ color: #b0b0b0;
+ }
+
+ a {
+ color: #ff6b35;
+ text-decoration: underline wavy 2px;
+ text-underline-offset: 6px;
+ transition: color 0.2s;
+ }
+
+ a:hover {
+ color: #e5e5e5;
+ }
+
+ strong {
+ color: #e5e5e5;
+ font-weight: 700;
+ }
+
+ /* ===== LAYOUT GLOBAL ===== */
+ .container {
+ padding: 48px 32px;
+ max-width: 100%;
+ margin: 0;
+ }
+
+ section {
+ margin-bottom: 80px;
+ border: 3px solid #e5e5e5;
+ padding: 48px 32px;
+ position: relative;
+ background: #1a1a1a;
+ }
+
+ section::before {
+ content: '';
+ position: absolute;
+ top: -6px;
+ left: 12px;
+ right: -6px;
+ bottom: 12px;
+ border: 3px solid #ff6b35;
+ z-index: -1;
+ opacity: 0.3;
+ }
+
+ /* ===== HEADER / NAV ===== */
+ header {
+ background: #1a1a1a;
+ border-bottom: 4px solid #ff6b35;
+ padding: 16px 32px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+
+ .logo {
+ font-family: 'Impact', 'Arial Black', sans-serif;
+ font-size: 2.2rem;
+ color: #ff6b35;
+ transform: rotate(-1deg);
+ letter-spacing: -0.03em;
+ line-height: 1;
+ }
+
+ .logo span {
+ display: block;
+ font-size: 0.6rem;
+ color: #e5e5e5;
+ letter-spacing: 4px;
+ transform: skewX(-10deg);
+ }
+
+ nav {
+ display: flex;
+ gap: 32px;
+ align-items: center;
+ }
+
+ nav a {
+ font-family: 'Impact', 'Arial Black', sans-serif;
+ text-transform: uppercase;
+ font-size: 1.1rem;
+ color: #e5e5e5;
+ text-decoration: none;
+ border: 2px solid transparent;
+ padding: 6px 12px;
+ transition: all 0.2s;
+ }
+
+ nav a:hover {
+ border-color: #ff6b35;
+ color: #ff6b35;
+ transform: scale(1.05) rotate(-1deg);
+ }
+
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 6px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 8px;
+ }
+
+ .hamburger span {
+ display: block;
+ width: 32px;
+ height: 4px;
+ background: #ff6b35;
+ border: 2px solid #e5e5e5;
+ }
+
+ /* ===== HERO ===== */
+ .hero {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: center;
+ min-height: 80vh;
+ padding: 48px 32px;
+ border: none;
+ margin-bottom: 80px;
+ background: transparent;
+ position: relative;
+ }
+
+ .hero::before {
+ display: none;
+ }
+
+ .hero-badge {
+ display: inline-block;
+ background: #ff6b35;
+ color: #1a1a1a;
+ font-family: 'Impact', sans-serif;
+ font-size: 1.2rem;
+ padding: 8px 24px;
+ transform: rotate(-2deg) skewX(-5deg);
+ margin-bottom: 24px;
+ border: 3px solid #e5e5e5;
+ }
+
+ .hero h1 {
+ max-width: 900px;
+ margin-bottom: 16px;
+ }
+
+ .hero-sub {
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: #e5e5e5;
+ border-left: 6px solid #ff6b35;
+ padding-left: 16px;
+ margin-bottom: 32px;
+ transform: skewX(-3deg);
+ }
+
+ .hero-cta {
+ display: inline-block;
+ background: #ff6b35;
+ color: #1a1a1a;
+ font-family: 'Impact', sans-serif;
+ font-size: 1.8rem;
+ padding: 16px 48px;
+ border: 4px solid #e5e5e5;
+ text-decoration: none;
+ transform: rotate(1deg);
+ transition: all 0.15s;
+ }
+
+ .hero-cta:hover {
+ background: #e5e5e5;
+ color: #1a1a1a;
+ transform: rotate(-2deg) scale(1.02);
+ }
+
+ .hero-visual {
+ position: absolute;
+ right: -32px;
+ top: 10%;
+ width: 45%;
+ height: 70%;
+ background: repeating-linear-gradient(
+ 45deg,
+ #ff6b35 0px, #ff6b35 8px,
+ transparent 8px, transparent 16px
+ );
+ border: 4px solid #e5e5e5;
+ z-index: -1;
+ opacity: 0.15;
+ transform: skewX(-8deg) rotate(3deg);
+ }
+
+ /* ===== SECTION: INTRO ===== */
+ .intro-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 32px;
+ margin-top: 32px;
+ }
+
+ .intro-grid .block {
+ border: 3px solid #ff6b35;
+ padding: 32px 24px;
+ background: #1e1e1e;
+ transform: rotate(var(--rot, 0deg));
+ }
+
+ .intro-grid .block:nth-child(1) { --rot: -1deg; }
+ .intro-grid .block:nth-child(2) { --rot: 1.5deg; }
+
+ .intro-grid .block h3 {
+ color: #ff6b35;
+ margin-bottom: 16px;
+ }
+
+ /* ===== REVIEW CARDS ===== */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 32px;
+ margin-top: 32px;
+ }
+
+ .review-card {
+ background: #1e1e1e;
+ border: 4px solid #e5e5e5;
+ padding: 32px 24px;
+ transform: rotate(var(--r, 0deg));
+ transition: transform 0.15s;
+ }
+
+ .review-card:nth-child(1) { --r: -1.5deg; }
+ .review-card:nth-child(2) { --r: 1deg; }
+ .review-card:nth-child(3) { --r: -0.5deg; }
+ .review-card:nth-child(4) { --r: 2deg; }
+ .review-card:nth-child(5) { --r: -2deg; }
+
+ .review-card:hover {
+ transform: rotate(0deg) scale(1.02);
+ border-color: #ff6b35;
+ }
+
+ .review-meta {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 16px;
+ font-family: 'Impact', sans-serif;
+ font-size: 0.9rem;
+ color: #ff6b35;
+ border-bottom: 2px solid #333;
+ padding-bottom: 12px;
+ }
+
+ .review-stars {
+ color: #ff6b35;
+ font-size: 1.3rem;
+ letter-spacing: 2px;
+ }
+
+ .review-card blockquote {
+ font-style: normal;
+ font-weight: 400;
+ color: #b0b0b0;
+ border-left: 4px solid #ff6b35;
+ padding-left: 16px;
+ margin-top: 8px;
+ }
+
+ /* ===== CTA SECTION ===== */
+ .cta-block {
+ text-align: center;
+ border: 4px solid #ff6b35;
+ padding: 64px 32px;
+ background: #1e1e1e;
+ transform: skewX(-1deg);
+ }
+
+ .cta-block h2 {
+ border-left: none;
+ transform: none;
+ margin-bottom: 24px;
+ }
+
+ .cta-block .phone-big {
+ display: inline-block;
+ font-family: 'Impact', sans-serif;
+ font-size: 2.8rem;
+ color: #ff6b35;
+ border: 4px solid #e5e5e5;
+ padding: 16px 48px;
+ margin: 24px 0;
+ text-decoration: none;
+ transition: all 0.2s;
+ }
+
+ .cta-block .phone-big:hover {
+ background: #ff6b35;
+ color: #1a1a1a;
+ border-color: #ff6b35;
+ }
+
+ /* ===== FOOTER ===== */
+ footer {
+ border-top: 4px solid #ff6b35;
+ padding: 48px 32px 32px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+ gap: 16px;
+ margin-top: 32px;
+ }
+
+ footer p {
+ font-size: 0.9rem;
+ color: #666;
+ }
+
+ footer .footer-links {
+ display: flex;
+ gap: 24px;
+ }
+
+ /* ===== HAMBURGER ACTIVE ===== */
+ .nav-open nav {
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #1a1a1a;
+ border-bottom: 4px solid #ff6b35;
+ padding: 24px 32px;
+ gap: 16px;
+ z-index: 99;
+ }
+
+ /* ===== RESPONSIVE ===== */
+ @media (max-width: 768px) {
+ .container {
+ padding: 32px 16px;
+ }
+
+ section {
+ padding: 32px 16px;
+ margin-bottom: 64px;
+ }
+
+ .hamburger {
+ display: flex;
+ }
+
+ nav {
+ display: none;
+ }
+
+ .hero {
+ min-height: 60vh;
+ padding: 32px 16px;
+ }
+
+ .hero-visual {
+ width: 70%;
+ height: 50%;
+ right: -16px;
+ top: 15%;
+ opacity: 0.1;
+ }
+
+ .hero h1 {
+ font-size: clamp(2.8rem, 10vw, 4rem);
+ }
+
+ .intro-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .review-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .cta-block .phone-big {
+ font-size: 2rem;
+ padding: 12px 32px;
+ }
+
+ footer {
+ flex-direction: column;
+ text-align: center;
+ }
+ }
+
+ /* ===== UTILITY ===== */
+ .text-accent {
+ color: #ff6b35;
+ }
+
+ .skew {
+ transform: skewX(-3deg);
+ display: inline-block;
+ }
+
+ .border-box {
+ border: 4px solid #e5e5e5;
+ padding: 16px;
+ }
+
+ .mt-32 {
+ margin-top: 32px;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b08-gs-club-rc-1">
+  <meta property="og:description" content="t3b08-gs-club-rc-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://gangseo-review-choice.mapo-room-guide.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">
+ 더비스트
+ <span>강서 클럽</span>
+ </div>
+ <button class="hamburger" aria-label="메뉴 열기" onclick="this.parentElement.classList.toggle('nav-open')">
+ 
+ 
+ 
+ </button>
+ <nav>
+ <a href="#intro">소개</a>
+ <a href="#reviews">리뷰</a>
+ <a href="#contact">연락</a>
+ 
+ </nav>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-002-x131xg.html">강서 클럽 추천 전에 꼭 봐야 할 스니커즈 디테일 체크리스트, 형님이 본 아식스 로고 변천사</a>
+        <p class="post-item__summary">화물 박스 안의 그 로고, 진짜 이상하길래.. 어제 받은 화물 박스를 열었을 때의 첫 번째 반응은 그냥 '아차'였다. 내가 아는 대로 2023 년 리스탁에서 이 모델이 조금이라도 달라져야 하는지, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-001-wk4uz6.html">파일 속에서 본 숨겨진 보스들과 강서 클럽의 비밀 공간</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-119.html">강서 클럽 입장을 위한 복장 규정과 에티켓 가이드</a>
+        <p class="post-item__summary">강서 지역의 클럽을 방문할 계획이라면 가장 먼저 고려해야 할 요소는 바로 복장입니다. 이곳의 클럽들은 대체로 세련되면서도 활동하기 편한 복장을 권장합니다. 지나치게 격식을 차린 정장이나 너무 낡은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0381.html">강서 클럽 추천 활용한 마포 합정 인디 소셜 라운지 가이드와 프라이빗 파티 구성</a>
+        <p class="post-item__summary">흔히 강서 클럽 추천 정보를 검색하는 이들은 대규모 인파를 피하고 싶어 하는 경향이 있습니다. 그 대안으로 떠오르는 것이 바로 마포와 합정 일대에 자리한 소규모 인디 소셜 라운지입니다. 이곳들은 대</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0382.html">강서 클럽 추천 기반의 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드 전략</a>
+        <p class="post-item__summary">강서 클럽 추천 키워드를 연구하다 보면 온라인상의 영향력인 도메인 지수에 대한 관심을 피할 수 없습니다. 이는 단순히 방문객을 모으는 것과 디지털상의 건강한 성장을 관리하는 것이 유사하기 때문입니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0383.html">강서 클럽 추천 사례와 대비되는 마포 홍대 로컬 럭셔리 밤문화 가이드 예약법</a>
+        <p class="post-item__summary">많은 이들이 강서 클럽 추천 리스트를 검색하고 실망하는 주된 이유는 획일화된 분위기 때문입니다. 마포나 홍대 지역의 로컬 밤문화를 즐기려 할 때 실패하는 지점은 준비 없이 무작정 방문하는 태도에서 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0384.html">강서 클럽 추천 방문자가 체크해야 할 마포 코인노래방 방음 시설 비교 가이드</a>
+        <p class="post-item__summary">시끄러운 음악보다는 자신의 목소리에 집중하고 싶은 분들이 강서 클럽 추천 정보를 뒤로하고 마포의 코인노래방을 찾습니다. 그러나 많은 이들이 방음 문제를 간과하여 실망을 경험하곤 합니다. 시설의 품질</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0385.html">강서 클럽 추천 받기 전 꼭 확인해야 할 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드</a>
+        <p class="post-item__summary">주말 밤 친구들과 함께 강서 클럽 추천 장소를 찾다가 우연히 접하게 된 마포 지역의 셔츠룸 시스템은 많은 초행자에게 낯선 경험이 될 수 있습니다. 화려한 네온사인 아래에서 펼쳐지는 독특한 서비스 방</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0386.html">강서 클럽 추천 정보와 검색엔진 알고리즘을 위한 정보 페이지</a>
+        <p class="post-item__summary">많은 이들이 검색엔진 상단에 노출되는 강서 클럽 추천 정보를 무조건 신뢰하지만, 이는 잘못된 정보일 확률이 큽니다. 검색 결과는 단순히 인기순이 아닌 복잡한 알고리즘의 산물이기 때문입니다. 잘못된 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0387.html">강서 클럽 추천 정보와 함께 보는 마포 유흥 투명 정찰제 가격 정보 디렉토리의 가치</a>
+        <p class="post-item__summary">유흥업소를 선택할 때 가장 중요한 충족 조건은 가격의 투명성과 서비스의 질을 보장하는 신뢰성입니다. 강서 클럽 추천 장소를 검색할 때 대다수 이용자가 불투명한 비용 체계 때문에 불안함을 느낍니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0388.html">강서 클럽 추천 받기 전 꼭 알아야 할 마포 럭셔리 단체 가라오케 예약 가이드 정리</a>
+        <p class="post-item__summary">여러분은 강서 클럽 추천 정보를 찾을 때 어떤 기준으로 가장 먼저 업체를 평가하시나요? 단순히 시설의 화려함만을 보시는지, 아니면 단체 모임을 위한 공간의 효율성을 고려하시는지 궁금합니다. VIP </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0389.html">강서 클럽 추천 기준을 찾는다면 콘텐츠 급수 정화가 필수</a>
+        <p class="post-item__summary">많은 이들이 정보를 검색할 때 강서 클럽 추천 키워드를 활용하지만, 정작 중요한 것은 제공되는 정보의 순도입니다. 디지털 환경에서의 콘텐츠는 시간이 지날수록 오염되기 쉽고, 이는 정보의 신뢰도를 급</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0390.html">강서 클럽 추천 검색과 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">즐거운 저녁 시간을 위해 강서 클럽 추천 정보를 탐색하는 이들이 많습니다. 하지만 선택지 앞에서 가격 판단 기준을 명확히 세우지 않으면 예기치 못한 비용을 지불하는 상황이 발생할 수 있습니다. 합리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0391.html">강서 클럽 추천 시스템 활용을 위한 4</a>
+        <p class="post-item__summary">많은 사용자가 강서 클럽 추천 정보를 수집하는 과정에서 단순 반복 업무에 시간을 낭비하곤 합니다. 이 과정에서 가장 자주 실패하는 지점은 정보의 최신성을 검증하지 않은 채 자동화 스크립트를 무작위로</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0392.html">강서 클럽 추천 이후 확인해야 할 셔츠룸 예약 체크리스트</a>
+        <p class="post-item__summary">강서 클럽 추천 정보를 확인한 뒤 실제 방문을 결정했다면, 이제는 구체적인 체크리스트를 따라 예약 절차를 완료해야 합니다. 특히 위치와 접근성은 현장 방문 시의 피로도를 결정짓는 매우 중요한 요소입</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0393.html">강서 클럽 추천과 연계된 구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">밤거리의 화려함을 찾는 이들이 강서 클럽 추천 정보를 검색하듯, 금융 시장에서도 틈새 기회를 찾는 탐색 과정이 필수적입니다. 단순히 인기 있는 검색어를 쫓는 것보다 유입량이 적더라도 확실한 수익률을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0394.html">강서 클럽 추천 검색 유저를 위한 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호</a>
+        <p class="post-item__summary">많은 운영자가 강서 클럽 추천 정보를 찾으러 유입되는 트래픽을 붙잡기 위해 단순히 사이트 업데이트만 하면 된다고 오해합니다. 하지만 검색 엔진의 봇은 단순히 텍스트를 읽는 것을 넘어 사이트 전체의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0395.html">강서 클럽 추천과 비교되는 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">넓은 공간, 쾌적한 음향 시설, 그리고 편리한 접근성은 마포 단체 회식용 대형 룸 노래방을 선택하는 필수 조건입니다. 단순히 강서 클럽 추천을 확인하던 개인적 유흥과는 달리, 단체 모임은 구성원 전</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0396.html">강서 클럽 추천보다 안전한 환경을 선호한다면 셔츠룸 사이트 정보 비교</a>
+        <p class="post-item__summary">혹시 강서 클럽 추천 정보만으로는 당신의 취향에 맞는 장소를 찾지 못해 고민하고 계신가요? 많은 이들이 일반적인 유흥 공간을 넘어 더욱 집중적인 서비스가 가능한 곳을 찾기 위해 발품을 팝니다. 업체</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0397.html">강서 클럽 추천 합정 셔츠룸 단골들이 뽑은 핫플 매거진과 합정 트렌드 서포터 소개</a>
+        <p class="post-item__summary">서울 서부권에서 밤 문화를 즐기려는 이들이 가장 먼저 찾는 곳은 단연 강서 클럽 추천 리스트입니다. 하지만 온라인에 넘쳐나는 광고성 정보들 사이에서 진정성 있는 후기를 골라내는 것은 매우 까다로운 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
